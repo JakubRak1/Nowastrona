@@ -1,0 +1,53 @@
+* {
+    font-family: 'Oswald', sans-serif;
+}
+
+#slide {
+    height: auto;
+    width: auto;
+    background: url('../img/star.jpg') no-repeat;
+}
+
+h1 {
+    color: white;
+    font-size: 44px;
+    margin-top: 75px;
+    margin-left: 50px;
+}
+
+h2 {
+    color: white;
+    font-size: 32px;
+    margin-top: 225px;
+    margin-left: 50px;
+}
+
+a {
+    font-weight: bold;
+    color: orange;
+}
+
+#app {
+    margin-left: 75px;
+    width: 200px;
+    height: 100px;
+}
+
+#google {
+    width: 200px;
+    height: 85px;
+}
+
+a:hover {
+    text-decoration: none;
+    color: orange;
+}
+
+a:link {
+    text-decoration: none;
+    color: orange;
+}
+a:visited{
+	text-decoration: none;
+	color: orange;
+}
