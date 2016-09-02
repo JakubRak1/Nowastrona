@@ -3,6 +3,19 @@
 }
 
 
+/********** Medium devices only **********/
+
+
+/*@media (min-width: 992px) and (max-width: 1199px) {}
+/********** Small devices only **********/
+
+
+/*@media (min-width: 768px) and (max-width: 991px) {}
+/********** Extra small devices only **********/
+
+
+/*@media (max-width: 767px) {}
+
 /* 1slajd */
 
 #slide {
@@ -80,6 +93,110 @@ a:visited {
 }
 
 
+/********** Medium devices only **********/
+
+@media (min-width: 992px) and (max-width: 1199px) {
+    #app {
+        width: 150px;
+        height: 75px;
+    }
+    #google {
+        width: 150px;
+        height: 75px;
+    }
+}
+
+
+/********** Small devices only **********/
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .colwithoutpadding {
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+    #app {
+        margin-left: 10%;
+        width: 40%;
+        height: auto;
+        padding-bottom: 15px;
+    }
+    #google {
+        width: 40%;
+        height: auto;
+        margin-right: 9%;
+        padding-bottom: 15px;
+    }
+    h1 {
+        font-size: 35px;
+        margin-top: 50px;
+        line-height: 150%;
+    }
+    h2 {
+        font-size: 30px;
+        line-height: 125%;
+    }
+    .slide1 {
+        text-align: center;
+        margin-left: 0px;
+    }
+    .largedevice {
+        visibility: hidden;
+        width: 0px;
+        height: 0px;
+    }
+    .space1 {
+        text-align: center;
+        margin-top: 150px;
+        margin-left: 0px;
+    }
+}
+
+
+/********** Extra small devices only **********/
+
+@media (max-width: 767px) {
+    .colwithoutpadding {
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+    #app {
+        margin-left: 10%;
+        width: 40%;
+        height: auto;
+        padding-bottom: 15px;
+    }
+    #google {
+        width: 40%;
+        height: auto;
+        margin-right: 9%;
+        padding-bottom: 15px;
+    }
+    h1 {
+        font-size: 29px;
+        margin-top: 25px;
+        line-height: 125%;
+    }
+    h2 {
+        font-size: 21px;
+        line-height: 100%;
+    }
+    .slide1 {
+        text-align: center;
+        margin-left: 0px;
+    }
+    .largedevice {
+        visibility: hidden;
+        width: 0px;
+        height: 0px;
+    }
+    .space1 {
+        text-align: center;
+        margin-top: 100px;
+        margin-left: 0px;
+    }
+}
+
+
 /* 2 slajd */
 
 #features {
@@ -101,8 +218,9 @@ a:visited {
     margin-top: 15px;
 }
 
-.rightcol {
+#rightcol {
     margin-top: 250px;
+    margin-bottom: 100px;
 }
 
 .greyborder {
@@ -117,22 +235,170 @@ a:visited {
     font-size: 1.25em;
 }
 
-.center {
-    margin-left: 25%;
-    margin-top: 25px;
-    background-color: black;
+.special {
+    color: orange;
+    cursor: pointer;
 }
 
-.center:hover {
+.center {
+    width: 30%;
+    margin-top: 25px;
+    background-color: black;
+    padding-left: 0px;
+    padding-right: 0px;
+    margin-left: 10%;
+}
+
+#rightcol:hover + .center {
     background: url('../img/Ferdynand.jpg') no-repeat;
     background-position: center;
     background-color: black;
+    animation-name: hover;
+    animation-duration: 1.5s;
 }
 
-.center:active {
+@keyframes hover {
+    from {
+        background: black;
+    }
+    to {
+        background: url('../img/Ferdynand.jpg') no-repeat;
+        background-position: center;
+        background-color: black;
+    }
+}
+
+#rightcol:active + .center {
     background: url('../img/Ferdynand2.jpg') no-repeat;
     background-position: center;
     background-color: black;
+    animation-name: active;
+    animation-duration: 3s;
+}
+
+@keyframes active {
+    from {
+        background: url('../img/Ferdynand.jpg') no-repeat;
+        background-position: center;
+        background-color: black;
+    }
+    to {
+        background: url('../img/Ferdynand2.jpg') no-repeat;
+        background-position: center;
+        background-color: black;
+    }
+}
+
+.undertext {
+    visibility: hidden;
+}
+
+
+/********** Small devices only **********/
+
+@media (min-width: 768px) and (max-width: 991px) {
+    #underline {
+        max-width: 70%;
+    }
+    #features {
+        font-size: 45px;
+    }
+    .spacebetwen {
+        margin-top: 100px;
+    }
+    #rightcol {
+        margin-bottom: 0px;
+        margin-top: 0px;
+    }
+    .h2page2 {
+        margin-bottom: 50px;
+    }
+    .center {
+        width: 40%;
+        margin-left: 30%;
+        margin-top: 50px;
+    }
+    .spaceafter {
+        margin-bottom: 120px;
+    }
+}
+
+
+/********** Extra small devices only **********/
+
+@media (max-width: 767px) {
+    #underline {
+        max-width: 70%;
+        min-width: 70%;
+    }
+    #features {
+        font-size: 35px;
+    }
+    .spacebetwen {
+        margin-top: 100px;
+    }
+    .h2page2 {
+        margin-left: 50px;
+        margin-right: 50px;
+        margin-top: 25px;
+        margin-bottom: 50px;
+    }
+    #rightcol {
+        margin-bottom: 0px;
+        margin-top: 0px;
+    }
+    .big {
+        font-size: 29px;
+    }
+    .center {
+        width: 40%;
+        margin-left: 30%;
+        margin-top: 50px;
+    }
+    #rightcol:hover + .center {
+        background: url('../img/Ferdynand.jpg') no-repeat;
+        background-size: 150px;
+        background-position: center;
+        background-color: black;
+        animation-name: hover;
+        animation-duration: 1.5s;
+    }
+    @keyframes hover {
+        from {
+            background: black;
+        }
+        to {
+            background: url('../img/Ferdynand.jpg') no-repeat;
+            background-size: 150px;
+            background-position: center;
+            background-color: black;
+        }
+    }
+    #rightcol:active + .center {
+        background: url('../img/Ferdynand2.jpg') no-repeat;
+        background-size: 150px;
+        background-position: center;
+        background-color: black;
+        animation-name: active;
+        animation-duration: 3s;
+    }
+    @keyframes active {
+        from {
+            background: url('../img/Ferdynand.jpg') no-repeat;
+            background-size: 150px;
+            background-position: center;
+            background-color: black;
+        }
+        to {
+            background: url('../img/Ferdynand2.jpg') no-repeat;
+            background-size: 150px;
+            background-position: center;
+            background-color: black;
+        }
+    }
+    .spaceafter {
+        margin-bottom: 50px;
+    }
 }
 
 
@@ -144,10 +410,6 @@ a:visited {
     width: 100%;
     background: url('../img/star2.jpg') no-repeat;
     padding-bottom: 10%;
-}
-
-.underline {
-    text-decoration: underline;
 }
 
 .icon {
@@ -185,10 +447,11 @@ a:visited {
     left: 27%;
     width: 45vw;
     height: 45vw;
+    margin-top: 50px;
 }
 
 .hiddenicons {
-    visibility: hidde;
+    visibility: hidden;
 }
 
 .righticons {
@@ -196,14 +459,107 @@ a:visited {
     left: 65%;
 }
 
-#phone1:hover .hiddenicons {
+#phone12:hover + .hiddenicons {
     visibility: visible;
+    animation-name: hovericon;
+    animation-duration: 3s;
+}
+
+@keyframes hovericon {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+#icon1 {
+    margin-bottom: 10px;
+}
+
+#icon2 {
+    margin-bottom: 10px;
+}
+
+#icon3 {
+    margin-bottom: 10px;
+}
+
+#icon4 {
+    margin-bottom: 10px;
+}
+
+
+/********** Medium devices only **********/
+
+@media (min-width: 768px) and (max-width: 991px) {
+    /********** Extra small devices only **********/
+    #phone1 {
+        width: 400px;
+        height: auto;
+        left: 22.5%;
+        margin-top: 0px;
+    }
+    .text-clear {
+        font-size: 1em;
+    }
+    hr {
+        margin-top: 15px;
+        margin-bottom: 15px;
+    }
+}
+
+@media (max-width: 767px) {
+    .text-clear {
+        font-size: 0.85em;
+    }
+    #phone1 {
+        visibility: hidden;
+    }
+    .hiddenicons {
+        visibility: visible;
+    }
+    #iconcolumn1 {
+        text-align: center;
+        padding-bottom: 25%;
+    }
+    #iconcolumn2 {
+        text-align: center;
+    }
+    .icon {
+        float: initial;
+        width: 40%;
+    }
+    .icon2 {
+        float: initial;
+        width: 40%;
+    }
+    .hrundertext {
+        width: 75%;
+        float: none;
+    }
+    .hrundertext2 {
+        width: 75%;
+        float: none;
+    }
+    .righticons {
+        position: initial;
+    }
 }
 
 
 /* 4 slajd */
 
 .offer {
+    border-radius: 2%;
+    width: 31.6%;
+    padding-left: 0px;
+    padding-right: 0px;
+    font-size: 2.5em;
+}
+
+.offer2 {
     border-radius: 2%;
     width: 31.6%;
     padding-left: 0px;
@@ -242,15 +598,40 @@ a:visited {
 }
 
 
+/********** Medium devices only **********/
+
+@media (max-width: 767px) {
+    .offer {
+        width: 46.25%;
+        margin-left: 2.5%;
+        margin-bottom: 5%;
+        font-size: 1.75em;
+    }
+    #offer2 {
+        width: 46.25%;
+        margin-right: 2.5%;
+        font-size: 1.75em;
+    }
+    .marginright {
+        margin-right: 0px;
+    }
+    .offer2 {
+        width: 95%;
+        margin-left: 2.5%;
+        margin-right: 2.5%;
+    }
+    .123i {}
+}
+
+
 /* 5 slajd */
 
 .star3 {
     margin-top: 150px;
     height: auto;
     width: 100%;
-    background: url('../img/starry.jpg') no-repeat;
+    background: url('../img/starry.jpg') repeat;
     padding-bottom: 10%;
-    margin-bottom: 250px;
 }
 
 .hero {
@@ -277,14 +658,57 @@ a:visited {
 }
 
 
+/********** Medium devices only **********/
+
+@media (min-width: 992px) and (max-width: 1199px) {
+    .bordersignature {
+        margin-bottom: 10%;
+    }
+}
+
+
+/********** Small devices only **********/
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .bordersignature {
+        margin-bottom: 10%;
+        width: 50%;
+        margin-left: 25%;
+    }
+    .hero {
+        width: 50%;
+        margin-left: 25%;
+    }
+}
+
+
+/********** Extra small devices only **********/
+
+@media (max-width: 767px) {
+    .signature {
+        font-size: 1.5em;
+    }
+    .bordersignature {
+        margin-bottom: 10%;
+        width: 75%;
+        margin-left: 12.5%;
+        height: auto;
+    }
+    .hero {
+        width: 75%;
+        height: auto;
+        margin-left: 12.5%;
+    }
+}
+
+
 /* 6 slajd */
 
 .contact {
-    margin-top: 150px;
     height: auto;
     width: 100%;
     padding-bottom: 10%;
-    background: url('../img/contact.png') no-repeat;
+    background: url('../img/contact.png') repeat;
     margin-bottom: 0px;
 }
 
@@ -330,7 +754,7 @@ label {
 
 .glyphicon {
     font-size: 3.5em;
-    color: orange;
+    color: black;
 }
 
 .glyphicon-1 {
@@ -370,4 +794,120 @@ label {
     color: black;
     font-weight: bold;
     margin-left: 42%;
+}
+
+
+/********** Small devices only **********/
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .whitebackground {
+        margin-right: 10%;
+        margin-left: 10%;
+        width: 80%;
+    }
+    .glyphicon-text {
+        font-size: 24px;
+        margin-left: 40%;
+    }
+    .glyphicon-text-2 {
+        font-size: 24px;
+        margin-left: 35%;
+    }
+    .glyphicon-text-3 {
+        font-size: 24px;
+        margin-left: 45%;
+    }
+}
+
+
+/********** Extra small devices only **********/
+
+@media (min-width: 376px) and (max-width: 767px) {
+    .whitebackground {
+        margin-right: 10%;
+        margin-left: 10%;
+        width: 80%;
+    }
+    .glyphicon-text {
+        font-size: 16px;
+        margin-left: 37%;
+    }
+    .glyphicon-text-2 {
+        font-size: 16px;
+        margin-left: 32%;
+    }
+    .glyphicon-text-3 {
+        font-size: 16px;
+        margin-left: 45%;
+    }
+}
+
+@media (min-width: 321px) and (max-width: 375px) {
+    .whitebackground {
+        margin-right: 10%;
+        margin-left: 10%;
+        width: 80%;
+    }
+    .glyphicon-text {
+        font-size: 16px;
+        margin-left: 29%;
+    }
+    .glyphicon-text-2 {
+        font-size: 16px;
+        margin-left: 25%;
+    }
+    .glyphicon-text-3 {
+        font-size: 16px;
+        margin-left: 35%;
+    }
+    .glyphicon-1 {
+        margin-top: 12.5%;
+        margin-left: 40%;
+        margin-bottom: 2.5%;
+    }
+    .glyphicon-2 {
+        margin-top: 12.5%;
+        margin-left: 40%;
+        margin-bottom: 2.5%;
+    }
+    .glyphicon-3 {
+        margin-top: 12.5%;
+        margin-left: 40%;
+        margin-bottom: 2.5%;
+    }
+}
+
+@media (max-width: 320px) {
+    .whitebackground {
+        margin-right: 10%;
+        margin-left: 10%;
+        width: 80%;
+    }
+    .glyphicon-text {
+        font-size: 16px;
+        margin-left: 27%;
+    }
+    .glyphicon-text-2 {
+        font-size: 16px;
+        margin-left: 22%;
+    }
+    .glyphicon-text-3 {
+        font-size: 16px;
+        margin-left: 35%;
+    }
+    .glyphicon-1 {
+        margin-top: 12.5%;
+        margin-left: 40%;
+        margin-bottom: 2.5%;
+    }
+    .glyphicon-2 {
+        margin-top: 12.5%;
+        margin-left: 40%;
+        margin-bottom: 2.5%;
+    }
+    .glyphicon-3 {
+        margin-top: 12.5%;
+        margin-left: 40%;
+        margin-bottom: 2.5%;
+    }
 }
